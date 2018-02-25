@@ -7,7 +7,7 @@
     "start": "node server.js"
   },
   "keywords": [],
-  "author": "",
+  "author": "Juan Barragan",
   "license": "MIT",
   "dependencies": {
     "express": "^4.16.2",

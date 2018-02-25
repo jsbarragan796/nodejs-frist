@@ -10,7 +10,7 @@ function findDocuments(db, callback) {
   const collection = db.collection("tweets");
   collection.find({}).toArray((err, docs) => {
     if (err) throw err;
-    // console.log(docs);
+    console.log("inicio ");
     callback(docs);
   });
 }
@@ -37,7 +37,7 @@ function getTweets(search,callback) {
     if (err) throw err;
     console.log("Connected");
     const db = client.db("webdev_tweets");
-    if(search==""){
+    if(search==undefined||search==""){
       findDocuments(db, callback);
     }
     else{
