@@ -4,7 +4,7 @@ const app = express();
 const MongoClient = require("mongodb").MongoClient;
 
 // Connection URL
-const url = "mongodb://intento2:admin@ds247678.mlab.com:47678/webdev_tweets";
+const url = process.env.MLAB;
 var port = process.env.PORT || 3000;
 
 function findDocuments(db, callback) {
@@ -57,4 +57,4 @@ app.get("/getTweets", (req, res) => {
   getTweets(req.query.search,callback);
 });
 
-app.listen(port, () => console.log("Example app listening on port 3000!"));
+app.listen(port, () => console.log("Example app listening on port"));
