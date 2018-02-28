@@ -4,7 +4,7 @@ const app = express();
 const MongoClient = require("mongodb").MongoClient;
 
 // Connection URL
-const url = "mongodb://localhost:27017";
+const url = "mongodb://intento2:admin@ds247678.mlab.com:47678/webdev_tweets";
 
 function findDocuments(db, callback) {
   const collection = db.collection("tweets");
